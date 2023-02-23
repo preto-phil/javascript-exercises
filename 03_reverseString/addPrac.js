@@ -30,12 +30,18 @@ const reverseString2 = function(str) {
 
     for (let i = str.length - 1; i >= 0; i--) {
         newString += str[i];
+        // console.log(newString)
     }
 
     return newString;
 };
 
+function reverseString3(str) {
+    return (str === "") ? "" : reverseString3(str.substring(1)) + str.charAt(0);
+}
+
 // Call functions
 reverseString1("Hello");
 console.log(reverseString1S("Hello"));
+console.log(reverseString2("Hello"));
 console.log(reverseString2("Hello"));
